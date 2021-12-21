@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.urls import path, include
 
 from MonExpense.views import monthly_expense
-#wewewecfgfgfsdsdsdsd
+
 urlpatterns = [
     path('', include('MonExpense.urls') ),
     path('admin/', admin.site.urls),
