@@ -3,4 +3,5 @@ from django.http import HttpResponse
 
 
 def monthly_expense(request):
-    return HttpResponse("Hello")
+    data = {}
+    return render(request, 'mon_expense.html', data)
