@@ -19,8 +19,9 @@ from django.urls import path, include
 from MonExpense.views import monthly_expense
 
 urlpatterns = [
-    path('', include('MonExpense.urls')),
-    path('', include('UserProfile.urls')),
-
+    path('', include('users.urls')),
+    path('expense/', include('MonExpense.urls')),
+    path('profile/', include('UserProfile.urls')),
+    path('accounts/', include('django.contrib.auth.urls')),
     path('admin/', admin.site.urls),
 ]
