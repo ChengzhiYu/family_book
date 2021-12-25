@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+    <form id="profile_form" method="post">
+    {% csrf_token %}
+        <label for='user'>User: </label>
+        <input id='user' type="text" name="user"><br/><br/>
+        <label for='email'>Email: </label>
+        <input id='email' type="email" name="email"><br/><br/>
+        <label for='bank'>Bank: </label>
+        <select id='bank' name="bank">
+            <option value="BMO">BMO</option>
+            <option value="RBC">RBC</option>
+            <option value="CIBC">CIBC</option>
+            <option value="SCOTIA">SCOTIA</option>
+            <option value="TD">TD</option>
+        </select>
+            <br/><br/>
+        <label for='card'>Card Name: </label>
+        <input id='card' type="text" name="card"><br/><br/>
+        <label for='card_note'>Card Info (i.e. use of the card): </label>
+        <input id='card_note' type="text" name="card_note"><br/><br/>
+        <input type="submit" value="Submit">
+    </form>
+{% endblock %}

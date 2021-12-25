@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-c77$i0@vf8)ae9(mgyx=hv+ivb$t&2+3w!6!fv@)-k20uw0&sa
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
 # Application definition
 
@@ -36,7 +36,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-'MonExpense'
+    'MonExpense',
+    'UserProfile',
 ]
 
 MIDDLEWARE = [
@@ -77,7 +78,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'family_book',
         'USER': 'postgres',
-        'PASSWORD': 'Yuchengzhi1',
+        'PASSWORD': 'R3a7^24oh7EK',
         'HOST': 'localhost',
         'PORT': '',
     }
@@ -115,8 +116,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
-STATIC_URL = 'static/'
-
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
