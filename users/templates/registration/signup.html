@@ -3,7 +3,15 @@
 
 <form method="post">
     {% csrf_token %}
-    {{form}}
+    <label for='username'>User Name: </label>
+    <input id='username' type="text" name="username" required><br/><br/>
+    <label for='email'>Email: </label>
+    <input id='email' type="email" name="email" required><br/><br/>
+    <label for='password1'>password: </label>
+    <input id='password1' type="text" name="password1" required><br/><br/>
+    <label for='password1'>repeat password: </label>
+    <input id='password1' type="text" name="password2" required><br/><br/>
+
     <input type="submit" value="Register">
 </form>
 

@@ -1,28 +1,14 @@
 {% extends 'base.html' %}
 {% block content %}
-  <head>
-    <style>
-     body {
-      color: cadetblue;
-      text-align: center;
-      }
-
-    </style>
-      <title>User Registration</title>
-  </head>
   <body>
 
     <h1>Hello, {{ user.username|default:'Guest' }}</h1>
 
     <p> Welcome to the Our site</p>
     <div>
-      {% if user.is_authenticated %}
-          <a href="{% url 'logout' %}">Logout</a>
-
-      {% else %}
-          <a href="{% url 'signup' %}">Sign Up</a> <br/>
-          <a href="{% url 'login' %}">Login</a>
-      {% endif %}
+        {% if user.is_authenticated %}
+          <a href="{% url 'monthly_expense' %}">Monthly_expense</a>
+        {% endif %}
   </div>
 
   </body>
